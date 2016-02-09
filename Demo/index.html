@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo for WelderJS</title>
+  <script src="../welder.js" charset="utf-8"></script>
+  <style media="screen">
+    @import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+    @import url(https://fonts.googleapis.com/css?family=Work+Sans:400,700);
+    body {
+      font-family: 'Work Sans', sans-serif;
+    }
+    h1 {
+      font-family: 'Bree Serif', serif;
+      font-size: 4em;
+      letter-spacing: 4px;
+    }
+    div.welderdemo {
+      background-color: #a4e;
+      /*transition: all 0.4s ease-out;*/
+    }
+    div.welderdemo p {
+      text-align: center;
+      font-size: 2em;
+      opacity: 0;
+      color: #fff;
+      transition: all 0.4s ease-out;
+      pointer-events: none;
+    }
+    div.welderdemo[data-state="small"] {
+      display: block;
+      position: relative;
+      width: 64px;
+      height: 64px;
+      margin: 0 auto;
+      border-radius: 64px;
+    }
+    div.welderdemo[data-state="large"] {
+      display: block;
+      position: fixed;
+      /*top: 0;*/
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 20vh;
+    }
+    div.welderdemo[data-state="large"] p {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>WELDER.JS DEMO</h1>
+  <div class="welderdemo" data-state="small">
+    <p>And now you see me...</p>
+  </div>
+
+  <script type="text/javascript">
+    var globalOpts = {
+    }
+    welder.init(globalOpts);
+
+    var div = document.querySelector('.welderdemo');
+    div.addEventListener('click', changeState);
+
+    function changeState(e) {
+      if(e.target.getAttribute('data-state')==='small') {
+        welder.transition(e.target, 'large');
+      } else {
+        welder.transition(e.target, 'small');
+      }
+    }
+  </script>
+</body>
+</html>
