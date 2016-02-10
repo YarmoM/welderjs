@@ -1,0 +1,25 @@
+{
+  "name": "welderjs",
+  "version": "1.1.0",
+  "description": "Transition between CSS states, no matter how they are positioned",
+  "main": "welder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YarmoM/welderjs.git"
+  },
+  "keywords": [
+    "welder",
+    "transition",
+    "css",
+    "states"
+  ],
+  "author": "Yarmo Mackenbach <yarmo@medea.one>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YarmoM/welderjs/issues"
+  },
+  "homepage": "https://github.com/YarmoM/welderjs#readme"
+}
