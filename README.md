@@ -43,9 +43,9 @@ Both upon initializing and requesting a transition, welder can be configured as 
 
 ``` js
 var globalOpts = {
-  delay: 50,                     // Delay in ms before transition occurs. Default (recommended): 50
-  duration: 400,                // Duration of transition in ms. Default: 400
-  easing: 'ease-out',           // CSS transition easing. Default: 'ease-out'
+  delay: 50,                   // Delay in ms before transition occurs. Default (recommended): 50
+  duration: 400,               // Duration of transition in ms. Default: 400
+  easing: 'ease-out',          // CSS transition easing. Default: 'ease-out'
   dataAttribute: 'data-state'  // The attribute used to switch between states. Default: 'data-state'
 }
 welder.init(globalOpts);
@@ -55,9 +55,9 @@ welder.init(globalOpts);
 var el = document.querySelector('#weldMe');
 
 var opts = {
-  delay: 50,                     // Delay in ms before transition occurs. Default (recommended): 50
-  duration: 400,                // Duration of transition in ms. Default: 400
-  easing: 'ease-out',           // CSS transition easing. Default: 'ease-out'
+  delay: 50,                   // Delay in ms before transition occurs. Default (recommended): 50
+  duration: 400,               // Duration of transition in ms. Default: 400
+  easing: 'ease-out',          // CSS transition easing. Default: 'ease-out'
   dataAttribute: 'data-state'  // The attribute used to switch between states. Default: 'data-state'
 }
 
@@ -67,5 +67,10 @@ welder.transition(el, 'newState', opts);
 ## Contributing
 
 Feeling inspired? Please contribute! Currently in need of demos and testing.
+
+## Roadmap
+
+- Testing
+- Ability to transition between states using classes
 
 [MIT License](http://yarmomackenbach.mit-license.org/) © Yarmo Mackenbach
