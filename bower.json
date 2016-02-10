@@ -1,0 +1,24 @@
+{
+  "name": "welderjs",
+  "description": "Transition between CSS states, no matter how they are positioned",
+  "main": "welder.js",
+  "authors": [
+    "Yarmo Mackenbach <yarmo@medea.one>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "welder",
+    "transition",
+    "css",
+    "states"
+  ],
+  "homepage": "https://github.com/YarmoM/welderjs",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
