@@ -6,12 +6,18 @@ No dependencies, only 1.3Kb when minified! Uses CSS animations.
 
 ## Installation
 
+### CDN
+
+``` html
+<script src="https://cdn.jsdelivr.net/welderjs/latest/welder.min.js"></script>
+```
+
 ### npm
 ``` bash
 $ npm install welderjs
 ```
 
-Bower
+### Bower
 ``` bash
 $ bower install welderjs
 ```
