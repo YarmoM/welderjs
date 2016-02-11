@@ -1,6 +1,6 @@
 {
   "name": "welderjs",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Transition between CSS states, no matter how they are positioned",
   "main": "welder.js",
   "scripts": {

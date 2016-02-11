@@ -3,9 +3,8 @@ window.welder = (function () {
   }
   var welder = {
     init: function(opts) {
-      // Initialise the weldeer
-      if(!opts) opts = {};
-
+      // Initialise the welder
+      opts = opts || {};
       welder.delay = opts.delay || 50;
       welder.duration = opts.duration || 400;
       welder.easing = opts.easing || 'ease-out';
@@ -13,19 +12,18 @@ window.welder = (function () {
       welder.dataAttribute = opts.dataAttribute || 'data-state';
     },
     transition: transition = function(el, newState, opts) {
-      // If the welderer is already animating this element, don't do it again.
+      // If the welder is already animating this element, don't do it again.
       if(el.classList.contains('welderAnimating')) {
         return false;
       }
 
       // Handle the options parameter
-      if(!opts) opts = {};
+      opts = opts || {};
       var delay = opts.delay || welder.delay;
       var duration = opts.duration || welder.duration;
       var easing = opts.easing || welder.easing;
       var dataAttribute = opts.dataAttribute || welder.dataAttribute;
       var relativeTo = opts.relativeTo || null;
-
 
       /*---------- Logic for the transition itself ----------*/
 
@@ -89,10 +87,8 @@ window.welder = (function () {
         el.style.transition = '';
         el.classList.remove('welderAnimating');
       }, duration+delay);
-
     }
-
   };
-
+  
   return welder;
 }());
