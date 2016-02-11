@@ -55,14 +55,21 @@ welder.init(globalOpts);
 var el = document.querySelector('#weldMe');
 
 var opts = {
-  delay: 50,                   // Delay in ms before transition occurs. Default (recommended): 50
-  duration: 400,               // Duration of transition in ms. Default: 400
-  easing: 'ease-out',          // CSS transition easing. Default: 'ease-out'
-  dataAttribute: 'data-state'  // The attribute used to switch between states. Default: 'data-state'
+  delay: 50,                    // Delay in ms before transition occurs. Default (recommended): 50
+  duration: 400,                // Duration of transition in ms. Default: 400
+  easing: 'ease-out',           // CSS transition easing. Default: 'ease-out'
+  dataAttribute: 'data-state',  // The attribute used to switch between states. Default: 'data-state'
+  relativeTo: document.querySelector('...')   // The reference for the transition (see below). Default: null
 }
 
 welder.transition(el, 'newState', opts);
 ```
+
+### Using a reference
+
+When you set the `relativeTo` option to anything other than an empty string (it's default value), welder will use the corresponding node instead of the viewport as the point of reference for the transition. This is particularly handy when scrolling might occur while the transition is playing.
+
+The way it works is that the transition element will have `absolute` positioning instead of the default `fixed` positioning. Please keep in mind that for this to work, the reference (preferably the parent node) has `relative`, `absolute` or `fixed` positioning.
 
 ## Contributing
 
