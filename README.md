@@ -24,24 +24,59 @@ $ bower install welderjs
 
 ## Example
 
-``` js
-// Include the library
-<script src="js/welder.js" charset="utf-8"></script>
+HTML 
 
-// Initialize the library with options
-var globalOpts = {
-  duration: 400
+``` html
+<div id="weldMe" data-state="oldState"></div>
+```
+
+CSS 
+
+``` css
+#weldMe[data-state="oldState"] {
+  display: block;
+  position: relative;
+  width: 128px;
+  height: 128px;
 }
-welder.init(globalOpts);
+#weldMe[data-state="newState"] {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 128px;
+  top: 0px;
+  left: 0px;
+}
+```
+
+JavaScript
+
+``` js
+// Initialize the library
+welder.init();
 
 // Transition an element to a new state
 var el = document.querySelector('#weldMe');
-welder.transition(el, 'newState', options);
+welder.transition(el, 'newState');
 ```
 
 ## Basics
 
 This library can transition elements between CSS states by simply switching a data attribute. By default, welder uses `data-state`, but this is configurable. After initializing the library, simply call `weld.transition(...)` and give it the string of the new state to transition to this state.
+
+## API
+
+#### `welder.init(options)`
+
+Initializes the welder plugin.  
+**options**: must be an object with options (see below) [optional]
+
+#### `welder.transition(element, newStateValue, [options])`
+
+Transitions an element to a new state.  
+**element**: the element that will be transitioned  
+**newStateValue**: the value of the data attribute used to style the states of the element  
+**options**: must be an object with options (see below) [optional]
 
 ## Configuration
 
@@ -73,13 +108,14 @@ welder.transition(el, 'newState', opts);
 
 ### Using a reference
 
-When you set the `relativeTo` option to anything other than an empty string (it's default value), welder will use the corresponding node instead of the viewport as the point of reference for the transition. This is particularly handy when scrolling might occur while the transition is playing.
+When you set the `relativeTo` option to anything other than *null* (its default value), welder will use the corresponding DOM element (must be a parent!) instead of the viewport as the point of reference for the transition. This is particularly handy when scrolling might occur while the transition is playing.
 
-The way it works is that the transition element will have `absolute` positioning instead of the default `fixed` positioning. Please keep in mind that for this to work, the reference (preferably the parent node) has `relative`, `absolute` or `fixed` positioning.
+The way it works is that the transition element will have `absolute` positioning instead of the default `fixed` positioning. Please keep in mind that for this to work, the reference needs to have `relative`, `absolute` or `fixed` positioning.
 
 ## Contributing
 
-Feeling inspired? Please contribute! Currently in need of demos and testing.
+Feeling inspired? Please feel free to contribute! I will gladly accept the pull requests.  
+Currently in need of demos and testing.
 
 ## Roadmap
 
