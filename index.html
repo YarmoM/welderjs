@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>WelderJS</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>WELDER JS</h1>
+    <p>Transition between CSS states, no matter how they are positioned!</p>
+    <p>No dependencies, only 1.3Kb when minified! Uses CSS animations.</p>
+  </header>
+  <content>
+    <div class="menuPlaceholder">
+      <div class="menu" data-state="inline">
+        <div class="title">Welder JS</div>
+        <div class="flex"></div>
+        <a class="menu__item" href="#">Home</a>
+        <a class="menu__item" href="#">Contact</a>
+        <a class="menu__item" href="https://github.com/YarmoM/welderjs">Github</a>
+      </div>
+    </div>
+    <div class="container">
+      <p>Click any of the images below to transition them to fixed positioning.</p>
+      <div class="imgPlaceholder">
+        <img src="img/bike.jpg" alt="" class="showcase" data-state="small" />
+      </div>
+      <div class="imgPlaceholder">
+        <img src="img/bridge.jpg" alt="" class="showcase" data-state="small" />
+      </div>
+      <div class="imgPlaceholder">
+        <img src="img/sparks.jpg" alt="" class="showcase" data-state="small" />
+      </div>
+      <div class="imgPlaceholder">
+        <img src="img/welder.jpg" alt="" class="showcase" data-state="small" />
+      </div>
+    </div>
+  </content>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/blissfuljs/1.0.0/bliss.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/welderjs/latest/welder.min.js" charset="utf-8"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

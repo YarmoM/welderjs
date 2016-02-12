@@ -1,0 +1,200 @@
+/* compileCompresed: styles.min.css*/
+
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+$swift: cubic-bezier(0.55,0,.1,1);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  font-family: 'Work Sans', sans-serif;
+}
+header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url(../img/tools.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+
+  h1 {
+    margin-bottom: 32px;
+    color: #fff;
+    font-size: 6em;
+    font-family: 'Bree Serif', serif;
+    -webkit-filter: drop-shadow(0px 4px rgba(0,0,0,0.7));
+            filter: drop-shadow(0px 4px rgba(0,0,0,0.7));
+  }
+  p {
+    color: #fff;
+    font-size: 1.5em;
+    -webkit-filter: drop-shadow(0px 2px rgba(0,0,0,0.7));
+            filter: drop-shadow(0px 2px rgba(0,0,0,0.7));
+  }
+}
+content {
+  background: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/redox_01.png");
+  display: block;
+  position: relative;
+  min-height: 150vh;
+
+  .menuPlaceholder {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 32px;
+  }
+  .menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 48px;
+    padding: 0 32px;
+    color: #fff;
+    background-color: #888;
+    border-bottom: 4px solid #777;
+
+    .title {
+      font-family: 'Bree Serif', serif;
+      font-size: 2em;
+    }
+    .menu__item {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 1 10%;
+          -ms-flex: 0 1 10%;
+              flex: 0 1 10%;
+      height: 44px;
+      line-height: 3em;
+      text-align: center;
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(255,255,255,0.3);
+      }
+    }
+    .flex {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+    }
+    .hb {
+      opacity: 0;
+    }
+
+    &[data-state="fixed"] {
+      position: fixed;
+      z-index: 100;
+      top: 0px;
+      width: 80%;
+      left: 10%;
+      border-radius: 0px 0px 8px 8px;
+      box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    }
+  }
+  .container {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 16px;
+    }
+  }
+  .imgPlaceholder {
+    display: inline-block;
+    position: relative;
+    width: 45%;
+    min-height: 10px;
+    margin: 0 4% 16px 0;
+    vertical-align: top;
+  }
+  .showcase {
+    display: inline-block;
+    width: 100%;
+    z-index: 0;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    cursor: pointer;
+
+    &[data-state="large"] {
+      position: fixed;
+      width: 60%;
+      left: 20%;
+      top: 10%;
+      z-index: 200;
+    }
+  }
+}
