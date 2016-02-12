@@ -1,8 +1,8 @@
 # WelderJS
 
-Transition between CSS states, no matter how they are positioned!
-
-No dependencies, only 1.5Kb when minified! Uses CSS animations.
+Transition between CSS states, no matter how they are positioned!  
+No dependencies, only 1.5Kb when minified! Uses CSS animations.  
+[Short simple demo](http://yarmom.github.io/welderjs/)
 
 ## Installation
 
